@@ -37,7 +37,6 @@ function* fetchPostsSaga(action) {
     yield put(actions.getPosts.getPostsFailure(err));
   }
 }
-
 ```
 ## Reducers
 Reducer là một hàm được sử dụng để cập nhật trạng thái của redux store. Reducer được gọi mỗi khi một action được dispatch, và được cung cấp action và trạng thái hiện tại của redux store làm đầu vào.
@@ -107,7 +106,6 @@ function postsReducer(state = [], action) {
       return state;
   }
 }
-
 ```
 
 Trong ví dụ này, chúng ta có một action ACTION_TYPE_FETCH_POSTS được sử dụng để khởi tạo saga fetchPosts(). Saga fetchPosts() sẽ truy cập cơ sở dữ liệu để lấy danh sách các bài đăng, sau đó sử dụng put() để dispatch một action mới với danh sách các bài đăng. Reducer postsReducer() sẽ cập nhật trạng thái của redux store dựa trên action mới này.
